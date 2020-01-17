@@ -1,0 +1,11 @@
+<div> 
+    <section class="todo_box">
+        <h1>ToDo List</h1>
+        <input type="text" placeholder="Filter your to-dos">
+        <ol >
+         <todo *ngFor="let todo of todos;"[task]= "todo.task"[completed]="todo.completed"></todo>
+        </ol>
+        <input type="text" placeholder="Add your to-dos">
+        <button class="add_btn">add</button>
+    </section>
+</div>
