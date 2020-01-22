@@ -9,7 +9,7 @@ import { ITodo } from './todo/todo.component'
 export class AppComponent {
   title = 'Lab-1';
   hideTitle = true;
-
+  newTask = '';
  
  todos : ITodo[] = [
     {
@@ -30,4 +30,10 @@ export class AppComponent {
     }
 
   ];
+  addTask(){
+    this.todos.push({
+      completed: false,
+      task: this.newTask
+    });
+  }
 }
