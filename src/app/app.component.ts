@@ -9,31 +9,19 @@ import { ITodo } from './todo/todo.component'
 export class AppComponent {
   title = 'Lab-1';
   hideTitle = true;
-  newTask = '';
- 
- todos : ITodo[] = [
-    {
-      completed: false,
-      task: 'take out trash'
-    },
-    {
-      completed: true,
-      task:'walk the dog'
-    },
-    {
-      completed: false,
-      task: 'Do the dishes'
-    },
-    {
-      completed: true,
-      task: 'buy new car!'
-    }
 
-  ];
-  addTask(){
-    this.todos.push({
-      completed: false,
-      task: this.newTask
-    });
+
+  todos: ITodo[] = [];
+
+  addTask(newTask = "") {
+    if (newTask) {
+      this.todos.push({ completed: false, task: newTask });
+    }
   }
+  onDeleted(index: number) {
+    console.log('deleting', index)
+    this.todos.splice(index, 1);
+    this.todos = [...this.todos];
+  }
+
 }

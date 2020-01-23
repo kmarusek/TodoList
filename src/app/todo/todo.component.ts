@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 export interface ITodo {
   completed: boolean;
@@ -16,13 +16,17 @@ export class TodoComponent implements ITodo {
  
   @Input() task : string;
 
-  // @Output() delete : EventEmitter = new EventEmitter<boolean>();
+  @Output() delete = new EventEmitter<boolean>();
 
   constructor() { }
 
-  // onDelete() {
-  //   this.deleted.emit(true);
-  //   }
+   deleted() {
+    this.delete.emit(true);
+    }
+
+   addLine(){
+     this.completed = true
+   }
 
   ngOnInit() {
   }

@@ -1,2 +1,2 @@
- <li [ngClass]="{'line': completed}"><button *ngIf='!completed' >complete</button> {{task}} <button *ngIf='!completed'>x</button></li>
+ <li [ngClass]="{'line': completed}"><button *ngIf='!completed' (click)="addLine()">complete</button> {{task}} <button *ngIf='completed' (click)="deleted()" >x</button></li>
 
