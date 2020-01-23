@@ -1,3 +1,36 @@
 .line {
   text-decoration: line-through;
 }
+li {
+  width: 100%;
+  font-family:'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+li.line {
+  margin: 8px 0;
+}
+
+.com_btn{
+  border: 1px solid #ff69b4;
+  color: #ff69b4;
+  margin: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.com_btn:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.x_btn {
+  border: none;
+  float:right;
+  margin: 0 10px 0;
+  cursor: pointer;
+}
+
+.x_btn:hover{
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
